@@ -1,16 +1,42 @@
-# React + Vite
+# KENYAN-POKER
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+react based web game implementation of the popular Kenyan card game,Kadi players compete against a computer AI to be the first to empty their hand while navigating strategic " power cards" and penalty stacks
 
-Currently, two official plugins are available:
+# Gameplay Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Classic Kadi Rules: Match cards by Suit or Rank to discard.
 
-## React Compiler
+Special Power Cards:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Question (Q or 8): Forces the next player to provide a matching Answer card.
 
-## Expanding the ESLint configuration
+Penalty (2, 3, or Joker): Forces the opponent to draw cards (2, 3, or 5 respectively).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Jump (J) & Kickback (K): Skips the opponent's turn.
+
+Penalty Stacking: Defend against draw penalties by playing a matching penalty card or an Ace.
+
+Niko Kadi: You must declare "Niko Kadi" when you have only one card left to win legally.
+
+Winning Condition: You must end the game on a valid "Answer" card or a "Question + Answer" combo.
+
+ # Tech Stack
+Framework: React 19.
+
+Build Tool: Vite.
+
+Routing: React Router DOM.
+
+API: Deck of Cards API for dynamic card assets.
+
+State Management: Custom React hooks (useKadiDeck) for deck synchronization and reshuffling logic.
+
+🛠️ Project Structure
+src/components/: Reusable UI components for hands, buttons, and the play area.
+
+src/pages/: Main application views (Home, GameBoard, Rules).
+
+src/utils/gameLogic.js: The core engine handling move validation, AI decision-making, and penalty calculations.
+
+src/hooks/: Custom hooks for managing game state and deck operations.
+
