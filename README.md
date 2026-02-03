@@ -1,5 +1,7 @@
 # KENYAN-POKER
 A react based web game implementation of the popular Kenyan card game,Kadi players compete against a computer AI to be the first to empty their hand while playing the game.
+After being issued a number of cards to play with.
+
 # Gameplay Features
 
 Classic Kadi Rules: Match cards by Suit or Rank to discard.
